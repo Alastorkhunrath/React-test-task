@@ -1,69 +1,29 @@
-# React + TypeScript + Vite
+# React Test Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Тестовое задание на **React + TypeScript + Vite**, на позицию "Junior Frontend-разработчик (React, TS)"
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📂 Установка и запуск
 
-## Expanding the ESLint configuration
+#Клонировать репозиторий:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1) git clone https://github.com/Alastorkhunrath/React-test-task.git
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2) cd React-test-task
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+3) npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4) npm run dev
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📌 Выполненные уровни задания
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**A** 
+- сделана Верстка по макету (React), и адаптив: мобилка + десктоп.
+- Получение данных 3 способами из WAQI, Sensor.Community, локальный sample.json в public
+- Отображение компонента в зависимоти от качества воздуха по AQI.
+- Отображение вторичного показателя
+- Состояния интерфейса: loading и error
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**B**
+- Автообновление данных каждую минуту
+- 1 юнит тест пересчёт AQI из PM2.5
